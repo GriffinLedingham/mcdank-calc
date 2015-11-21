@@ -31,6 +31,8 @@ function get_foods(banned_list_str, total_val, max)
     banned_list = banned_list_str.split(',');
   }
 
+  total_val = total_val*100;
+
   if(max == '' || max == 0)
   {
     max = 1;
