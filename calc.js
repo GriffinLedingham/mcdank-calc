@@ -129,7 +129,7 @@ function get_foods(banned_list_str, total_val, max)
   out+= '<br/><span style="font-size:50px;">Total weight: <span style="font-weight:bold;color:green;">'+val + 'g</span></span>';
   out+= '</div></body>'+index_str.toString('ascii', 0, index_str.length);
 
-  out+= "<script>$('#val_div').val("+total_val+");$('#ban_div').val("+banned_list_str+");$('#max_div').val("+max+");</script>";
+  out+= "<script>$('#val_div').val("+total_val+");$('#ban_div').val('"+banned_list_str+"');$('#max_div').val("+max+");</script>";
 
 
   return out;
