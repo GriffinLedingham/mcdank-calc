@@ -119,16 +119,16 @@ function get_foods(banned_list_str, total_val, max, sort_on)
   }
   var index_str = fs.readFileSync('div_form.html','utf8');
 
-
-  var out='<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><body style="background:#EFEFEF;"><link href=\'https://fonts.googleapis.com/css?family=Roboto\' rel=\'stylesheet\' type=\'text/css\'><div style="font-family: \'Roboto\', sans-serif;text-align:center;"><div style="font-size:50px;">YOU SHOULD BUY</div><table style="margin:auto;margin-top:50px;text-align:center;"><tr><td><b>Count</b></td><td style="margin-left:10px;margin-right:10px;"><b>Item</b></td><th>PRICE</th><th>WEIGHT</th>';
-  var wgt= 0;
-  var val= 0;
-
   var unit = 'g';
+  var title = sort_on.toUpperCase();
   if(sort_on == 'calories')
   {
     unit = 'cal';
   }
+
+  var out='<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><body style="background:#EFEFEF;"><link href=\'https://fonts.googleapis.com/css?family=Roboto\' rel=\'stylesheet\' type=\'text/css\'><div style="font-family: \'Roboto\', sans-serif;text-align:center;"><div style="font-size:50px;">YOU SHOULD BUY</div><table style="margin:auto;margin-top:50px;text-align:center;"><tr><td><b>Count</b></td><td style="margin-left:10px;margin-right:10px;"><b>Item</b></td><th>PRICE</th><th>'+title+'</th>';
+  var wgt= 0;
+  var val= 0;
 
   for (var i= 0; i<best.length; i++) {
     if (0==best[i]) continue;
