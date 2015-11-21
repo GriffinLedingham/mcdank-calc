@@ -65,7 +65,7 @@ function get_foods(banned_list_str, total_val, max, sort_on)
           var is_banned = false;
           for(var k = 0;k<banned_list.length;k++)
           {
-            if(item_obj.name.indexOf(banned_list[k]) != -1)
+            if(item_obj.name.toLowerCase().indexOf(banned_list[k].toLowerCase()) != -1)
             {
               is_banned = true;
               break;
