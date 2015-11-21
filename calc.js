@@ -1,7 +1,6 @@
 var menu_json = require('./menu.json');
 var cost_json = require('./prices.json');
 var fs = require('fs');
-var _ = require('underscore');
 
 var express = require("express");
 var app = express();
