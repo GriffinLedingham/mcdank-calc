@@ -12,14 +12,14 @@ app.get("/", function(req, res) {
 
 app.get("/mealme", function(req, res) {
   /* some server side logic */
-  res.send(get_foods(req.query.list, req.query.val, 1));
+  res.send(get_foods(req.query.list, req.query.val, 1, req.query.optimal));
 });
 
 var port = process.env.PORT || 9001;
 app.listen(port, function() {
 });
 
-function get_foods(banned_list_str, total_val, max)
+function get_foods(banned_list_str, total_val, max, sort_on)
 {
   var data = [];
   var dupe_list = [];
@@ -58,6 +58,7 @@ function get_foods(banned_list_str, total_val, max)
             value : price,
             weight: regex_res[1] ,
             name: name_regex_res[1],
+            calories: parseInt(menu_json[i].CAL),
             pieces: parseInt(max)
           };
 
@@ -102,7 +103,7 @@ function get_foods(banned_list_str, total_val, max)
       for (var n= 1; n<=N; n++) {
         var W= n*data[j].value; // how much do these items weigh?
         var s= w>=W ?1 :0; // can we carry this many?
-        var v= s*n*data[j].weight; // how much are they worth?
+        var v= s*n*data[j][sort_on]; // how much are they worth?
         var I= base+n; // what is the item number for this many?
         var wN= w-s*W; // how much other stuff can we be carrying?
         var C= n*P[j] + b[wN][base]; // encoded combination
@@ -123,19 +124,27 @@ function get_foods(banned_list_str, total_val, max)
   var wgt= 0;
   var val= 0;
 
+  var unit = 'g';
+  if(sort_on == 'calories')
+  {
+    unit = 'cal';
+  }
+
   for (var i= 0; i<best.length; i++) {
     if (0==best[i]) continue;
-    out+='</tr><tr style="text-align:center;font-size:22px;padding:10px;"><td style="padding:10px;">'+best[i]+'</td><td>'+data[i].name+'</td><td>$'+data[i].value/100+'</td><td>'+data[i].weight+'g</td>'
+    out+='</tr><tr style="text-align:center;font-size:22px;padding:10px;"><td style="padding:10px;">'+best[i]+'</td><td>'+data[i].name+'</td><td>$'+data[i].value/100+'</td><td>'+data[i][sort_on]+unit+'</td>'
     wgt+= best[i]*data[i].value;
-    val+= best[i]*data[i].weight;
+    val+= best[i]*data[i][sort_on];
   }
   out+= '</tr></table><br/><span style="font-size:50px;">Total value: <span style="font-weight:bold;color:green;">$'+wgt/100+'</span></span>';
-  out+= '<br/><span style="font-size:50px;">Total weight: <span style="font-weight:bold;color:green;">'+val + 'g</span></span>';
+  out+= '<br/><span style="font-size:50px;">Total weight: <span style="font-weight:bold;color:green;">'+val;
+  if(sort_on == 'weight') out+='g</span></span>';
+  if(sort_on == 'calories') out+='cal</span></span>';
   out+= '</div></body>';
 
   out+=index_str.toString('ascii', 0, index_str.length);
 
-  out+= "<script>$('#val_div').val("+total_val/100+");$('#ban_div').val('"+banned_list_str+"');$('#max_div').val("+max+");</script>";
+  out+= "<script>$('#val_div').val("+total_val/100+");$('#ban_div').val('"+banned_list_str+"');$('#max_div').val("+max+");$('#"+sort_on+"').click();</script>";
 
 
   return out;
