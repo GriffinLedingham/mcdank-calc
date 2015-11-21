@@ -1,0 +1,342 @@
+[
+    {
+        "name": "Big Mac",
+        "price": 467
+    },
+    {
+        "name": "2 Cheeseburgers",
+        "price": 234
+    },
+    {
+        "name": "Quarter Pounder with Cheese",
+        "price": 443
+    },
+    {
+        "name": "Double Quarter Pounder with Cheese",
+        "price": 560
+    },
+    {
+        "name": "Bacon Clubhouse Burger",
+        "price": 525
+    },
+    {
+        "name": "Buttermilk Crispy Chicken",
+        "price": 514
+    },
+    {
+        "name": "Artisan Grilled Chicken",
+        "price": 514
+    },
+    {
+        "name": "Premium McWrap Chicken & Bacon (Grilled or Crispy)",
+        "price": 514
+    },
+    {
+        "name": "Premium McWrap Chicken & Ranch (Grilled or Crispy)",
+        "price": 514
+    },
+    {
+        "name": "Premium McWrap Sweet Chili Chicken (Grilled or Crispy)",
+        "price": 514
+    },
+    {
+        "name": "Filet-O-Fish",
+        "price": 443
+    },
+    {
+        "name": "Double Filet-O-Fish",
+        "price": 560
+    },
+    {
+        "name": "Premium Chicken Bacon Clubhouse (Grilled or Crispy)",
+        "price": 525
+    },
+    {
+        "name": "BBQ Pulled Pork Sandwich",
+        "price": 350
+    },
+    {
+        "name": "Chicken McNuggets 10 Pc.",
+        "price": 525
+    },
+    {
+        "name": "Chicken McNuggets 20 Pc.",
+        "price": 585
+    },
+    {
+        "name": "Chicken McNuggets 40 Pc.",
+        "price": 1052
+    },
+    {
+        "name": "Southwest Salad",
+        "price": 560
+    },
+    {
+        "name": "Bacon Ranch Salad",
+        "price": 537
+    },
+    {
+        "name": "Chicken Ranch Snack Wrap (Grilled or Crispy)",
+        "price": 198
+    },
+    {
+        "name": "Small French Fries  ",
+        "price": 163
+    },
+    {
+        "name": "Medium French Fries",
+        "price": 198
+    },
+    {
+        "name": "Large French Fries",
+        "price": 221
+    },
+    {
+        "name": "Grilled Onion Cheddar Burger",
+        "price": 117
+    },
+    {
+        "name": "McDouble",
+        "price": 163
+    },
+    {
+        "name": "McChicken",
+        "price": 151
+    },
+    {
+        "name": "BBQ Ranch Burger",
+        "price": 117
+    },
+    {
+        "name": "Cheeseburger",
+        "price": 117
+    },
+    {
+        "name": "Double Cheeseburger",
+        "price": 198
+    },
+    {
+        "name": "Daily Double",
+        "price": 233
+    },
+    {
+        "name": "Bacon McDouble",
+        "price": 234
+    },
+    {
+        "name": "4 Pc. Chicken McNuggets",
+        "price": 233
+    },
+    {
+        "name": "20 Pc. Chicken McNuggets",
+        "price": 585
+    },
+    {
+        "name": "Parfait",
+        "price": 117
+    },
+    {
+        "name": "Side Salad",
+        "price": 186
+    },
+    {
+        "name": "3 Cookies",
+        "price": 117
+    },
+    {
+        "name": "Cone",
+        "price": 117
+    },
+    {
+        "name": "Apple Slices  2 Bags",
+        "price": 117
+    },
+    {
+        "name": "Sausage Burrito",
+        "price": 139
+    },
+    {
+        "name": "Sausage McMuffin",
+        "price": 139
+    },
+    {
+        "name": "Sausage Biscuit",
+        "price": 139
+    },
+    {
+        "name": "Hash Browns",
+        "price": 117
+    },
+    {
+        "name": "Coffee  ",
+        "price": 105
+    },
+    {
+        "name": "Egg & Cheese Biscuit",
+        "price": 163
+    },
+    {
+        "name": "Cinnamon Melt",
+        "price": 186
+    },
+    {
+        "name": "Smoothie (Mango Pineapple, Strawberry Banana, or Blueberry Pomegranate) ",
+        "price": 280
+    },
+    {
+        "name": "Smoothie (Mango Pineapple, Strawberry Banana, or Blueberry Pomegranate) Medium",
+        "price": 338
+    },
+    {
+        "name": "Smoothie (Mango Pineapple, Strawberry Banana, or Blueberry Pomegranate) ",
+        "price": 397
+    },
+    {
+        "name": "Frappe (Mocha, Caramel, or Chocolate Chip)  ",
+        "price": 280
+    },
+    {
+        "name": "Frappe (Mocha, Caramel, or Chocolate Chip)  Medium",
+        "price": 338
+    },
+    {
+        "name": "Frappe (Mocha, Caramel, or Chocolate Chip)  ",
+        "price": 397
+    },
+    {
+        "name": "Espresso & Chocolate (Mocha, Caramel Mocha, Iced Mocha, Iced Caramel Mocha, Latte, Hot Chocolate, White Chocolate Mocha or White Hot Chocolate) ",
+        "price": 280
+    },
+    {
+        "name": "Espresso & Chocolate (Mocha, Caramel Mocha, Iced Mocha, Iced Caramel Mocha, Latte, Hot Chocolate, White Chocolate Mocha or White Hot Chocolate) Medium",
+        "price": 338
+    },
+    {
+        "name": "Espresso & Chocolate (Mocha, Caramel Mocha, Iced Mocha, Iced Caramel Mocha, Latte, Hot Chocolate, White Chocolate Mocha or White Hot Chocolate) ",
+        "price": 397
+    },
+    {
+        "name": "Premium Roast Coffee  ",
+        "price": 105
+    },
+    {
+        "name": "Premium Roast Coffee  Medium",
+        "price": 151
+    },
+    {
+        "name": "Premium Roast Coffee  ",
+        "price": 174
+    },
+    {
+        "name": "Iced Coffee ",
+        "price": 163
+    },
+    {
+        "name": "Iced Coffee Medium",
+        "price": 209
+    },
+    {
+        "name": "Iced Coffee ",
+        "price": 233
+    },
+    {
+        "name": "Sweet Tea ",
+        "price": 117
+    },
+    {
+        "name": "Sweet Tea Medium",
+        "price": 151
+    },
+    {
+        "name": "Sweet Tea ",
+        "price": 174
+    },
+    {
+        "name": "Soft Drink  ",
+        "price": 117
+    },
+    {
+        "name": "Soft Drink  Medium",
+        "price": 151
+    },
+    {
+        "name": "Soft Drink  ",
+        "price": 174
+    },
+    {
+        "name": "Orange Juice  ",
+        "price": 186
+    },
+    {
+        "name": "Orange Juice  Medium",
+        "price": 221
+    },
+    {
+        "name": "Orange Juice  ",
+        "price": 245
+    },
+    {
+        "name": "Milk",
+        "price": 117
+    },
+    {
+        "name": "Dasani Water  Bottle",
+        "price": 117
+    },
+    {
+        "name": "Shake (Chocolate, Vanilla, or Strawberry) ",
+        "price": 256
+    },
+    {
+        "name": "Shake (Chocolate, Vanilla, or Strawberry) Medium",
+        "price": 303
+    },
+    {
+        "name": "Shake (Chocolate, Vanilla, or Strawberry) ",
+        "price": 350
+    },
+    {
+        "name": "Shamrock Shake (Limited Time) ",
+        "price": 256
+    },
+    {
+        "name": "Shamrock Shake (Limited Time) Medium",
+        "price": 303
+    },
+    {
+        "name": "Shamrock Shake (Limited Time) ",
+        "price": 350
+    },
+    {
+        "name": "Sundae (Hot Fudge or Caramel)",
+        "price": 151
+    },
+    {
+        "name": "Apple Pie",
+        "price": 116
+    },
+    {
+        "name": "Cone (Vanilla)",
+        "price": 117
+    },
+    {
+        "name": "McFlurry  ",
+        "price": 209
+    },
+    {
+        "name": "McFlurry  ",
+        "price": 280
+    },
+    {
+        "name": "Soft Baked Chocolate Chip Cookie  1 Pc",
+        "price": 46
+    },
+    {
+        "name": "Soft Baked Chocolate Chip Cookie  3 Pc",
+        "price": 117
+    },
+    {
+        "name": "Strawberry & Creme Pie (Limited Time)",
+        "price": 116
+    }
+]
