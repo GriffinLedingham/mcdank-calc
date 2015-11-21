@@ -1,6 +1,7 @@
 var menu_json = require('./menu.json');
 var cost_json = require('./prices.json');
 var fs = require('fs');
+var _ = require('underscore');
 
 var express = require("express");
 var app = express();
@@ -12,13 +13,11 @@ app.get("/", function(req, res) {
 
 app.get("/mealme", function(req, res) {
   /* some server side logic */
-  console.log(req.query.max);
-  res.send(get_foods(req.query.list, req.query.val, req.query.max));
+  res.send(get_foods(req.query.list, req.query.val, 1));
 });
 
 var port = process.env.PORT || 9001;
 app.listen(port, function() {
- console.log("Listening on " + port);
 });
 
 function get_foods(banned_list_str, total_val, max)
@@ -37,6 +36,7 @@ function get_foods(banned_list_str, total_val, max)
   {
     max = 1;
   }
+
   for(var i = 0;i< menu_json.length;i++)
   {
     if(menu_json[i].ITEM.indexOf('g)') != -1)
@@ -118,9 +118,12 @@ function get_foods(banned_list_str, total_val, max)
     choose-= best[j]*P[j];
   }
   var index_str = fs.readFileSync('div_form.html','utf8');
+
+
   var out='<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><body style="background:#EFEFEF;"><link href=\'https://fonts.googleapis.com/css?family=Roboto\' rel=\'stylesheet\' type=\'text/css\'><div style="font-family: \'Roboto\', sans-serif;text-align:center;"><div style="font-size:50px;">YOU SHOULD BUY</div><table style="margin:auto;margin-top:50px;text-align:center;"><tr><td><b>Count</b></td><td style="margin-left:10px;margin-right:10px;"><b>Item</b></td><th>PRICE</th><th>WEIGHT</th>';
   var wgt= 0;
   var val= 0;
+
   for (var i= 0; i<best.length; i++) {
     if (0==best[i]) continue;
     out+='</tr><tr style="text-align:center;font-size:22px;padding:10px;"><td style="padding:10px;">'+best[i]+'</td><td>'+data[i].name+'</td><td>$'+data[i].value/100+'</td><td>'+data[i].weight+'g</td>'
@@ -129,12 +132,12 @@ function get_foods(banned_list_str, total_val, max)
   }
   out+= '</tr></table><br/><span style="font-size:50px;">Total value: <span style="font-weight:bold;color:green;">$'+wgt/100+'</span></span>';
   out+= '<br/><span style="font-size:50px;">Total weight: <span style="font-weight:bold;color:green;">'+val + 'g</span></span>';
-  out+= '</div></body>'+index_str.toString('ascii', 0, index_str.length);
+  out+= '</div></body>';
+
+  out+=index_str.toString('ascii', 0, index_str.length);
 
   out+= "<script>$('#val_div').val("+total_val/100+");$('#ban_div').val('"+banned_list_str+"');$('#max_div').val("+max+");</script>";
 
 
   return out;
 }
-
-
